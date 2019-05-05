@@ -26,7 +26,7 @@ Function ExecuteDeath(Actor act)
 	act.MoveTo(RespawnPoint)
 	
 	act.SetActorValue("Paralysis", 0)
-	act.ResetHealthAndLimbs()
+	act.ResetHealthAndLimbs() ; cause runtime error?
 	if (act.IsWeaponDrawn())
 		act.SheatheWeapon()
 	endif
