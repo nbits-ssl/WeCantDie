@@ -27,13 +27,13 @@ Function ExecuteDeath(Actor act)
 	
 	act.SetActorValue("Paralysis", 0)
 	act.ResetHealthAndLimbs() ; cause runtime error?
-	if (act.IsWeaponDrawn())
-		act.SheatheWeapon()
-	endif
 	
 	Utility.Wait(2)
 	FadeToBlackHoldImod.PopTo(FadeToBlackBackImod)
 	FadeToBlackHoldImod.Remove()
+	if (act.IsWeaponDrawn())
+		act.SheatheWeapon()
+	endif
 	Utility.Wait(3)
 	FadeToBlackBackImod.Remove()
 	Game.EnablePlayerControls(true, true, true, true, true, true, true, true, 0)
