@@ -40,8 +40,10 @@ Event OnOptionSelect(int option)
 		
 		if (modEnabled)
 			WCDControlScript.Reboot()
+			debug.notification("We Can't Die enabled")
 		else
 			WCDControlScript.Stop()
+			debug.notification("We Can't Die disabled")
 		endif
 	endif
 EndEvent
